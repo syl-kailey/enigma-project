@@ -8,8 +8,8 @@ public class EnigmaFrame extends JFrame implements ActionListener{
     JComboBox<Integer> middle;
     JComboBox<Integer> outer;
     JTextField intPosition;
-    JTextField input;
-    JTextField output;
+    JTextArea input;
+    JTextArea output;
     JButton encrypt;
     JButton decrypt;
 
@@ -27,9 +27,9 @@ public class EnigmaFrame extends JFrame implements ActionListener{
         intPosition.setPreferredSize(new Dimension(100,20));
         encrypt = new JButton("Encrypt");
         decrypt = new JButton("Decrypt");
-        input = new JTextField();
+        input = new JTextArea();
         input.setPreferredSize(new Dimension(500,200));
-        output = new JTextField();
+        output = new JTextArea();
         output.setPreferredSize(new Dimension(500,200));
         output.setEditable(false); //do not let the result be edited
 
@@ -52,7 +52,6 @@ public class EnigmaFrame extends JFrame implements ActionListener{
         panel3.add(new JLabel("Output "));
         panel3.add(output);
         
-        input.addActionListener(this);
         inner.addActionListener(this);
         middle.addActionListener(this); 
         outer.addActionListener(this);
